@@ -28,6 +28,9 @@
 <h2>2. 이용자가 방문하는 웹사이트</h2>
 <p>앱 내 브라우저로 웹사이트를 열거나 영상을 받을 때, 해당 웹사이트와 영상 서버에 IP 주소, 브라우저 정보(User-Agent), 그 사이트의 쿠키가 전송됩니다. 이는 일반 웹 브라우저와 같으며, 각 사이트의 개인정보처리방침이 적용됩니다.</p>
 
+<h2>2-1. 차단 우회 기능 (선택)</h2>
+<p>이용자가 메뉴에서 "차단 우회"를 켠 경우에만, 앱 브라우저와 다운로드 통신이 기기 안의 중계(127.0.0.1)를 거칩니다. 이때 방문하는 사이트의 주소(도메인 이름) 조회는 암호화 DNS(DNS over HTTPS)로 Cloudflare(1.1.1.1)에 보내지며, Cloudflare의 개인정보처리방침(<a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 공개 DNS 정책</a>)이 적용됩니다. 운영자는 이 조회 내용을 받지 않습니다. 이 기능은 IP 주소나 접속 국가를 바꾸지 않습니다.</p>
+
 <h2>3. 광고 (Google AdMob)</h2>
 <p>무료 다운로드 횟수를 주기 위해 Google AdMob 보상형 광고와 Google 동의 관리 도구(UMP)를 사용합니다. 광고 SDK는 광고 제공, 측정, 부정 사용 방지를 위해 다음 정보를 Google에 전송할 수 있습니다.</p>
 <ul>
@@ -64,6 +67,8 @@
 <p>This information stays on your device and is never sent to the developer. It is deleted when you uninstall the app.</p>
 <h2>2. Websites you visit</h2>
 <p>When you open a website or save a video in the in-app browser, your IP address, browser information (User-Agent) and that site's cookies are sent to the website and its video servers, the same as with any web browser. Each site's own privacy policy applies.</p>
+<h2>2-1. Bypass blocking (optional)</h2>
+<p>Only when you turn on "Bypass blocking" in the menu, the in-app browser and downloads go through a relay inside your device (127.0.0.1). Domain name lookups for the sites you visit are then sent over encrypted DNS (DNS over HTTPS) to Cloudflare (1.1.1.1), and Cloudflare's <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 public resolver policy</a> applies. The developer does not receive these lookups. This feature does not change your IP address or country.</p>
 <h2>3. Ads (Google AdMob)</h2>
 <p>To give free downloads, the app uses Google AdMob rewarded ads and Google's consent tool (UMP). The ads SDK may send the following to Google for ad delivery, measurement and fraud prevention:</p>
 <ul><li>Advertising ID, app set ID and similar device identifiers</li><li>IP address and approximate location derived from it</li><li>Ad and app interactions (views, clicks), app performance and crash information</li></ul>
