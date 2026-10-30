@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VidSave Test Page</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script></head>
+<body style="font-family:sans-serif">
+<h3>MP4 (Google sample, ForBiggerBlazes)</h3>
+<video id="mp4" controls width="320" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+<h3>HLS (Mux test stream, Big Buck Bunny)</h3>
+<video id="hls" controls width="320"></video>
+<script>
+var v=document.getElementById('hls'), src='https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
+if (window.Hls && Hls.isSupported()){ var h=new Hls(); h.loadSource(src); h.attachMedia(v); } else { v.src=src; }
+</script>
+</body></html>
